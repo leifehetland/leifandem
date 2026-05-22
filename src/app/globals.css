@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind v4 theme tokens — keep in sync with PALETTE in src/lib/constants.ts.
+ *
+ * Warm pastel wedding palette:
+ *   void          → warm ivory  (page background)
+ *   cyan-glow     → terracotta  (primary accent — hero titles, interactive elements)
+ *   magenta-glow  → reddish-brown (secondary accent — emphasis, gift button)
+ *   green-glow    → dusty blue  (tertiary accent)
+ *   ink           → warm espresso (body text)
+ *
+ * Font variables (--font-script, --font-display, --font-body) are injected
+ * by next/font onto <html> at runtime; the @theme block references them so
+ * Tailwind utility classes pick them up.
+ *   --font-script  → Yellowtail (h1 hero headlines)
+ *   --font-display → Playfair Display (h2–h6 subheadings)
+ *   --font-body    → Roboto (prose, captions, labels)
+ */
+@theme {
+  --color-void: #fdf6f0;
+  --color-cyan-glow: #c4724e;
+  --color-magenta-glow: #8a3e2a;
+  --color-green-glow: #8fadbf;
+  --color-ink: #2e1812;
+
+  /* Alias for clarity in components */
+  --color-peach: #c4724e;
+  --color-terra: #8a3e2a;
+
+  /* Override Tailwind's font-sans so the body font applies globally */
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background-color: var(--color-void);
+    color: var(--color-ink);
+    min-height: 100dvh;
+  }
+
+  /*
+   * h1: Yellowtail script — flowing, handwritten feel for hero headlines.
+   * h2–h6: Playfair Display — elegant editorial serif for all subheadings.
+   */
+  h1 {
+    font-family: var(--font-script), cursive;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display), ui-serif, serif;
+  }
+
+  /*
+   * Warm radial washes on the body — visible between sessions and on the
+   * low-tier fallback where the canvas does not render.
+   */
+  body {
+    background-image:
+      radial-gradient(
+        ellipse 80% 60% at 70% 40%,
+        color-mix(in oklab, var(--color-cyan-glow) 14%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 20% 75%,
+        color-mix(in oklab, var(--color-magenta-glow) 8%, transparent) 0%,
+        transparent 60%
+      );
+    background-attachment: fixed;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Focus rings visible on the warm light backdrop. */
+  :focus-visible {
+    outline: 2px solid var(--color-cyan-glow);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /*
+   * Warm heading treatment — a very soft terracotta drop-shadow instead of
+   * the neon glow from the previous dark theme.
+   */
+  .text-glow-cyan {
+    text-shadow:
+      0 1px 10px color-mix(in oklab, var(--color-cyan-glow) 25%, transparent),
+      0 2px 24px color-mix(in oklab, var(--color-cyan-glow) 12%, transparent);
+  }
+
+  /*
+   * Loading screen and overlay background — warm ivory with soft peach and
+   * terra washes to give depth before the canvas renders.
+   */
+  .bg-void-gradient {
+    background:
+      radial-gradient(
+        ellipse 80% 60% at 70% 40%,
+        color-mix(in oklab, var(--color-cyan-glow) 14%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 20% 75%,
+        color-mix(in oklab, var(--color-magenta-glow) 8%, transparent) 0%,
+        transparent 60%
+      ),
+      var(--color-void);
+  }
+}
+
+@layer components {
+  /* MDX story prose — warm tones throughout. */
+  .story-prose {
+    color: color-mix(in oklab, var(--color-ink) 80%, transparent);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .story-prose h1 {
+    color: var(--color-cyan-glow);
+    font-size: 1.5rem;
+    /* Yellowtail is a single-weight script font (400 only); no font-weight override needed. */
+    margin-bottom: 1rem;
+    text-shadow:
+      0 1px 8px color-mix(in oklab, var(--color-cyan-glow) 25%, transparent);
+  }
+  .story-prose h2,
+  .story-prose h3 {
+    color: var(--color-ink);
+    font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .story-prose p + p {
+    margin-top: 1rem;
+  }
+  .story-prose em {
+    color: var(--color-magenta-glow);
+    font-style: italic;
+  }
+  .story-prose a {
+    color: var(--color-cyan-glow);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .story-prose code {
+    background: rgb(0 0 0 / 0.04);
+    border-radius: 4px;
+    padding: 0.05rem 0.35rem;
+    font-size: 0.85em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

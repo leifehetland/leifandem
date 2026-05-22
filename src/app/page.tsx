@@ -1,0 +1,53 @@
+import { SceneBackground } from '@/components/scene/SceneBackground';
+import { AudioToggle } from '@/components/ui/AudioToggle';
+import { FocusedCardModal } from '@/components/ui/FocusedCardModal';
+import { GalleryPanel } from '@/components/ui/GalleryPanel';
+import { GiftModal } from '@/components/ui/GiftModal';
+import { Hero } from '@/components/ui/Hero';
+import { LoadingScreen } from '@/components/ui/LoadingScreen';
+import { NavButtons } from '@/components/ui/NavButtons';
+import { StoryContent } from '@/components/ui/StoryContent';
+import { StoryPanel } from '@/components/ui/StoryPanel';
+import { WebGLFallback } from '@/components/ui/WebGLFallback';
+
+/**
+ * The only route. Server Component that composes Client overlays plus the
+ * dynamically-imported 3D background and the 2D low-tier fallback.
+ *
+ * Stacking & pointer-events:
+ *   <SceneBackground>   fixed inset-0, no z-index, FIRST in DOM → behind
+ *                       <main>. Pointer-events ON so cards can be clicked.
+ *   <main>              relative, no z-index, AFTER SceneBackground → on
+ *                       top visually but `pointer-events-none` so clicks
+ *                       fall through to the canvas. Has no background of
+ *                       its own; the gradient lives on <body> in globals.css
+ *                       so it shows through when the canvas isn't rendered.
+ *   z= 10  <WebGLFallback> (relative, inside main, only when tier='low')
+ *   z= 30  <Hero>, <NavButtons>, <AudioToggle>
+ *   z= 40  <FocusedCardModal>, <GiftModal>
+ *   z= 50  <StoryPanel>, <LoadingScreen>
+ *
+ * `<StoryContent />` is a Server Component that reads + compiles the MDX
+ * narrative; it is passed as children into the client `<StoryPanel />`.
+ */
+export default function Page() {
+  return (
+    <>
+      <SceneBackground />
+
+      <main className="pointer-events-none relative min-h-dvh w-full overflow-hidden">
+        <WebGLFallback />
+        <Hero />
+        <NavButtons />
+        <AudioToggle />
+        <FocusedCardModal />
+        <GiftModal />
+        <StoryPanel>
+          <StoryContent />
+        </StoryPanel>
+        <GalleryPanel />
+        <LoadingScreen />
+      </main>
+    </>
+  );
+}
