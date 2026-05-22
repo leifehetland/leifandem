@@ -3,30 +3,32 @@
 /*
  * Tailwind v4 theme tokens — keep in sync with PALETTE in src/lib/constants.ts.
  *
- * Warm pastel wedding palette:
- *   void          → warm ivory  (page background)
- *   cyan-glow     → terracotta  (primary accent — hero titles, interactive elements)
- *   magenta-glow  → reddish-brown (secondary accent — emphasis, gift button)
- *   green-glow    → dusty blue  (tertiary accent)
- *   ink           → warm espresso (body text)
+ * Antique-invite palette (token names are legacy from the dark theme; values
+ * are what counts):
+ *   void          → warm cream / antique paper  (page background)
+ *   cyan-glow     → oxblood                      (primary accent + body text)
+ *   magenta-glow  → darker oxblood               (strokes, secondary accent)
+ *   green-glow    → muted sage                   (tertiary illustration tone)
+ *   ink           → oxblood                      (body text alias)
  *
- * Font variables (--font-script, --font-display, --font-body) are injected
+ * Font variables (--font-display, --font-script, --font-body) are injected
  * by next/font onto <html> at runtime; the @theme block references them so
  * Tailwind utility classes pick them up.
- *   --font-script  → Yellowtail (h1 hero headlines)
- *   --font-display → Playfair Display (h2–h6 subheadings)
- *   --font-body    → Roboto (prose, captions, labels)
+ *   --font-display → Boldonse        (h1 — bold display banner)
+ *   --font-script  → Pinyon Script   (h2–h6 — formal italic script)
+ *   --font-body    → Roboto          (prose, captions, labels)
  */
 @theme {
-  --color-void: #fdf6f0;
-  --color-cyan-glow: #c4724e;
-  --color-magenta-glow: #8a3e2a;
-  --color-green-glow: #8fadbf;
-  --color-ink: #2e1812;
+  --color-void: #e8dccb;
+  --color-cyan-glow: #a63838;
+  --color-magenta-glow: #903634;
+  --color-green-glow: #a9b78c;
+  --color-ink: #a63838;
 
-  /* Alias for clarity in components */
-  --color-peach: #c4724e;
-  --color-terra: #8a3e2a;
+  /* Aliases for clarity in components */
+  --color-peach: #a63838;
+  --color-terra: #903634;
+  --color-sage: #a9b78c;
 
   /* Override Tailwind's font-sans so the body font applies globally */
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
@@ -45,11 +47,11 @@
   }
 
   /*
-   * h1: Yellowtail script — flowing, handwritten feel for hero headlines.
-   * h2–h6: Playfair Display — elegant editorial serif for all subheadings.
+   * h1: Boldonse — bold condensed display banner.
+   * h2–h6: Pinyon Script — formal italic script with Spencerian flair.
    */
   h1 {
-    font-family: var(--font-script), cursive;
+    font-family: var(--font-display), 'Impact', sans-serif;
   }
 
   h2,
@@ -57,7 +59,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-display), ui-serif, serif;
+    font-family: var(--font-script), cursive;
   }
 
   /*
@@ -133,7 +135,6 @@
   .story-prose h1 {
     color: var(--color-cyan-glow);
     font-size: 1.5rem;
-    /* Yellowtail is a single-weight script font (400 only); no font-weight override needed. */
     margin-bottom: 1rem;
     text-shadow:
       0 1px 8px color-mix(in oklab, var(--color-cyan-glow) 25%, transparent);

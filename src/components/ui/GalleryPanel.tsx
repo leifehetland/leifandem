@@ -10,11 +10,14 @@ import { useSceneStore } from '@/stores/sceneStore';
 import type { PhotoItem, VideoItem } from '@/types';
 
 /**
- * Full-screen swipe carousel for photos and videos.
+ * Full-screen carousel for photos and videos.
  *
- * Uses CSS scroll-snap for native touch swiping — no library needed.
- * Arrow keys also navigate. The counter and dot indicators stay in sync
- * by reading scroll position from the scroll event.
+ * Renders only the active slide plus its two neighbours (prev/next) so the
+ * DOM stays small regardless of manifest size. Navigation via prev/next
+ * buttons, arrow keys, or touch swipe.
+ *
+ * We deliberately avoid CSS scroll-snap over a large item set: a 308-item
+ * snap container creates a ~30 000vw layout that freezes most browsers.
  */
 
 const galleryItems = mediaItems.filter(
@@ -22,47 +25,33 @@ const galleryItems = mediaItems.filter(
     item.type === 'photo' || item.type === 'video',
 );
 
+/** Minimum swipe distance (px) to trigger slide change. */
+const SWIPE_THRESHOLD = 50;
+
 export function GalleryPanel() {
   const isOpen = useSceneStore((state) => state.isGalleryOpen);
   const close = useSceneStore((state) => state.closeGallery);
   const [activeIndex, setActiveIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
   const total = galleryItems.length;
+
+  // Touch tracking refs — no state so swipe doesn't trigger re-renders.
+  const touchStartX = useRef<number | null>(null);
 
   useEscapeKey(close, isOpen);
 
-  // Reset to slide 0 whenever the panel opens
+  // Reset to slide 0 whenever the panel opens.
   useEffect(() => {
-    if (isOpen) {
-      setActiveIndex(0);
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft = 0;
-      }
-    }
+    if (isOpen) setActiveIndex(0);
   }, [isOpen]);
-
-  const scrollToIndex = useCallback((index: number) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    el.scrollTo({ left: index * el.clientWidth, behavior: 'smooth' });
-  }, []);
-
-  // Derives activeIndex from scroll position — handles both native swipe and button clicks.
-  const handleScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el || el.clientWidth === 0) return;
-    const index = Math.round(el.scrollLeft / el.clientWidth);
-    setActiveIndex(Math.max(0, Math.min(total - 1, index)));
-  }, [total]);
 
   const goTo = useCallback(
     (index: number) => {
-      scrollToIndex(Math.max(0, Math.min(total - 1, index)));
+      setActiveIndex(Math.max(0, Math.min(total - 1, index)));
     },
-    [total, scrollToIndex],
+    [total],
   );
 
-  // Arrow key navigation
+  // Arrow key navigation.
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => {
@@ -72,6 +61,17 @@ export function GalleryPanel() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [isOpen, activeIndex, goTo]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const dx = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(dx) >= SWIPE_THRESHOLD) goTo(activeIndex + (dx > 0 ? -1 : 1));
+  };
 
   const item = galleryItems[activeIndex];
 
@@ -103,42 +103,51 @@ export function GalleryPanel() {
             </button>
           </div>
 
-          {/* Slide strip — native CSS scroll snap */}
+          {/*
+           * Slide viewport — position:relative, overflow:hidden.
+           *
+           * Only the active slide and its immediate neighbours are in the DOM
+           * (max 3 elements). Each is absolute-positioned and cross-fades via
+           * opacity so the transition feels like a slide without requiring
+           * every item to occupy layout space.
+           */}
           <div
-            ref={scrollRef}
-            onScroll={handleScroll}
-            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-            style={{ scrollbarWidth: 'none' } as React.CSSProperties}
-            className="flex min-h-0 flex-1 snap-x snap-mandatory overflow-x-auto"
+            className="relative min-h-0 flex-1 overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
-            {galleryItems.map((galleryItem, i) => (
-              <div
-                key={galleryItem.id}
-                className="flex h-full w-full flex-shrink-0 snap-center items-center justify-center px-4"
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                className="absolute inset-0 flex items-center justify-center px-4"
+                initial={{ opacity: 0, x: 24 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -24 }}
+                transition={{ duration: 0.22, ease: 'easeInOut' }}
               >
-                {galleryItem.type === 'photo' ? (
+                {item?.type === 'photo' ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={galleryItem.src}
-                    alt={galleryItem.alt}
-                    width={galleryItem.width}
-                    height={galleryItem.height}
-                    loading={Math.abs(i - activeIndex) <= 1 ? 'eager' : 'lazy'}
+                    src={item.src}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    loading="eager"
                     className="max-h-full max-w-full rounded-xl object-contain"
                   />
-                ) : (
+                ) : item?.type === 'video' ? (
                   <video
-                    src={galleryItem.src}
-                    poster={galleryItem.poster}
+                    src={item.src}
+                    poster={item.poster}
                     controls
-                    muted={!galleryItem.hasAudio}
+                    muted={!item.hasAudio}
                     playsInline
-                    aria-label={galleryItem.alt}
+                    aria-label={item.alt}
                     className="max-h-full max-w-full rounded-xl"
                   />
-                )}
-              </div>
-            ))}
+                ) : null}
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           {/* Footer: prev arrow / caption / next arrow */}
@@ -166,23 +175,6 @@ export function GalleryPanel() {
             >
               <ChevronRight size={22} aria-hidden="true" />
             </button>
-          </div>
-
-          {/* Dot indicators */}
-          <div className="flex flex-shrink-0 justify-center gap-1.5 pb-6">
-            {galleryItems.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-label={`Go to item ${i + 1}`}
-                onClick={() => goTo(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === activeIndex
-                    ? 'w-5 bg-cyan-glow'
-                    : 'w-1.5 bg-ink/20 hover:bg-ink/40'
-                }`}
-              />
-            ))}
           </div>
         </motion.div>
       )}

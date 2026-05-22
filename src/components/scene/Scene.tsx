@@ -22,7 +22,7 @@ export function Scene() {
 
   return (
     <Canvas dpr={dpr} gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}>
-      <color attach="background" args={['#fdf6f0']} />
+      <color attach="background" args={['#e8dccb']} />
       <CameraRig />
       <ambientLight intensity={0.9} />
       <ParticleField />

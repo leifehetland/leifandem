@@ -12,6 +12,7 @@ export type {
   PhotoItem,
   VideoItem,
   AudioItem,
+  WithPosition,
 } from '@/lib/media-manifest';
 
 export type DeviceTier = 'high' | 'mid' | 'low';

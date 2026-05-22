@@ -52,7 +52,7 @@ export function StoryPanel({ children }: { children: ReactNode }) {
                 id="story-panel-title"
                 className="text-glow-cyan text-lg font-light tracking-wide"
               >
-                Our story
+                Our Story
               </h2>
               <button
                 type="button"

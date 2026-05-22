@@ -5,8 +5,9 @@ import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 
+import { PALETTE } from '@/lib/constants';
 import { useSceneStore } from '@/stores/sceneStore';
-import type { VideoItem } from '@/types';
+import type { VideoItem, WithPosition } from '@/types';
 
 const HOVER_SCALE = 1.12;
 const BASE_HEIGHT = 1.7;
@@ -21,7 +22,7 @@ const SCALE_LERP = 0.14;
  * conservation; that polish lands in Phase 4 — for now the video autoplays
  * muted, which all browsers permit without a user gesture.
  */
-export function VideoCard({ item }: { item: VideoItem }) {
+export function VideoCard({ item }: { item: WithPosition<VideoItem> }) {
   const groupRef = useRef<THREE.Group>(null);
   const texture = useVideoTexture(item.src, {
     muted: true,
@@ -79,7 +80,7 @@ export function VideoCard({ item }: { item: VideoItem }) {
       <mesh position={[0, 0, -0.01]}>
         <planeGeometry args={[width + 0.09, height + 0.09]} />
         <meshBasicMaterial
-          color="#3ad6ff"
+          color={PALETTE.peach}
           transparent
           opacity={hovered || isFocused ? 0.85 : 0.45}
           blending={THREE.AdditiveBlending}

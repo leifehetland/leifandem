@@ -1,32 +1,33 @@
 import type { Metadata, Viewport } from 'next';
-import { Yellowtail, Playfair_Display, Roboto } from 'next/font/google';
+import { Boldonse, Pinyon_Script, Roboto } from 'next/font/google';
 
 import './globals.css';
 import { MotionProvider } from '@/components/shared/MotionProvider';
 import { COUPLE, SITE } from '@/lib/constants';
 
 /**
- * h1 script font: Yellowtail — flowing, handwritten script for hero headlines.
- * Exposed as --font-script; applied to h1 in globals.css.
+ * h1 display font: Boldonse — condensed bold sans with ink-trap details,
+ * matching the antique invite's all-caps banner. Single weight (400).
+ * Exposed as --font-display; applied to h1 in globals.css.
  */
-const yellowtail = Yellowtail({
+const boldonse = Boldonse({
   subsets: ['latin'],
-  variable: '--font-script',
+  variable: '--font-display',
   weight: '400',
   display: 'swap',
+  // Boldonse isn't in next/font's size-adjust DB yet — opt out of the warning.
+  adjustFontFallback: false,
 });
 
 /**
- * Display/subheading font: Playfair Display — elegant editorial serif for h2–h6.
- * Exposed as --font-display; replaces the previous Josefin Sans geometric.
- * To swap back to Josefin Sans or a self-hosted font, change this import and
- * keep the same variable name so no other code needs updating.
+ * h2–h6 script font: Pinyon Script — formal italic with Spencerian swash
+ * capitals, matching the "please join us / Montauk / May" copy on the invite.
+ * Single weight (400). Exposed as --font-script.
  */
-const playfairDisplay = Playfair_Display({
+const pinyonScript = Pinyon_Script({
   subsets: ['latin'],
-  variable: '--font-display',
-  weight: ['400', '500', '700'],
-  style: ['normal', 'italic'],
+  variable: '--font-script',
+  weight: '400',
   display: 'swap',
 });
 
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#fdf6f0',
+  themeColor: '#e8dccb',
   width: 'device-width',
   initialScale: 1,
   // Pinch-zoom stays enabled at the document level; the canvas opts out locally.
@@ -72,7 +73,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${yellowtail.variable} ${playfairDisplay.variable} ${roboto.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${boldonse.variable} ${pinyonScript.variable} ${roboto.variable}`}>
       <body data-couple={`${COUPLE.partnerOne}-${COUPLE.partnerTwo}`}>
         <a
           href="#gifts"

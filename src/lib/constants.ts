@@ -35,17 +35,17 @@ export const GIFT_COPY = {
 /**
  * Palette — keep this in sync with globals.css custom properties.
  *
- * Warm pastel wedding theme:
- *   void    → warm ivory background
- *   peach   → terracotta / deep peach — primary accent (hero text, interactive)
- *   terra   → reddish brown — secondary accent (italic emphasis)
- *   blue    → muted dusty blue — tertiary accent
- *   ink     → warm espresso — body text
+ * Antique-invite palette:
+ *   void    → warm cream / antique paper — page background
+ *   peach   → brick red / oxblood — body text + primary accent
+ *   terra   → darker oxblood — strokes, secondary accent, bolder hits
+ *   blue    → muted sage — tertiary accent (illustration, soft contrast)
+ *   ink     → oxblood (same as peach) — body text token alias
  */
 export const PALETTE = {
-  void: '#FDF6F0',
-  peach: '#C4724E',
-  terra: '#8A3E2A',
-  blue: '#8FADBF',
-  ink: '#2E1812',
+  void: '#E8DCCB',
+  peach: '#A63838',
+  terra: '#903634',
+  blue: '#A9B78C',
+  ink: '#A63838',
 } as const;

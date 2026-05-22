@@ -6,7 +6,7 @@ import * as THREE from 'three';
 
 import { PALETTE } from '@/lib/constants';
 import { useSceneStore } from '@/stores/sceneStore';
-import type { AudioItem } from '@/types';
+import type { AudioItem, WithPosition } from '@/types';
 
 const HOVER_SCALE = 1.18;
 const BASE_RADIUS = 0.42;
@@ -20,7 +20,7 @@ const PULSE_SPEED = 1.8;
  * Real audio-amplitude reactivity (SPECS §4 high-tier only) is wired in
  * Phase 4 alongside Howler playback. The current pulse is a stand-in.
  */
-export function AudioOrb({ item }: { item: AudioItem }) {
+export function AudioOrb({ item }: { item: WithPosition<AudioItem> }) {
   const groupRef = useRef<THREE.Group>(null);
   const matRef = useRef<THREE.MeshStandardMaterial>(null);
   const setFocusedCard = useSceneStore((state) => state.setFocusedCard);

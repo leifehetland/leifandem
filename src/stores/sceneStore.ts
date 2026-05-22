@@ -43,6 +43,11 @@ type PersistedFields = Pick<SceneStore, 'isMuted' | 'tier'>;
 
 /**
  * Persist only `isMuted` and `tier` to sessionStorage — per SPECS.md §3.
+ *
+ * `createJSONStorage` wraps the getter in try/catch, so a ReferenceError on
+ * the server returns `undefined` and persist skips storage safely. The
+ * explicit `typeof window` guard below makes the intent unambiguous and
+ * avoids any edge-case differences across Zustand releases.
  */
 export const useSceneStore = create<SceneStore>()(
   persist(
@@ -74,7 +79,9 @@ export const useSceneStore = create<SceneStore>()(
     }),
     {
       name: 'wedding-splash:scene',
-      storage: createJSONStorage(() => sessionStorage),
+      storage: createJSONStorage(() =>
+        typeof window !== 'undefined' ? sessionStorage : (undefined as unknown as Storage)
+      ),
       partialize: (state): PersistedFields => ({
         isMuted: state.isMuted,
         tier: state.tier,
