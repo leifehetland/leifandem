@@ -33,6 +33,17 @@ export const GIFT_COPY = {
 } as const;
 
 /**
+ * Spotify playlist embedded in the bottom-pinned player bar.
+ * Update `embedUrl` to swap the playlist (use the `/embed/playlist/...` URL
+ * from Spotify's "Share → Embed playlist" dialog).
+ */
+export const PLAYLIST = {
+  embedUrl:
+    'https://open.spotify.com/embed/playlist/2nACHum35lEAC2uyu5wn3K?utm_source=generator&theme=0',
+  title: 'Our wedding playlist',
+} as const;
+
+/**
  * Palette — keep this in sync with globals.css custom properties.
  *
  * Antique-invite palette:

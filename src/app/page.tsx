@@ -7,6 +7,7 @@ import { GiftModal } from '@/components/ui/GiftModal';
 import { Hero } from '@/components/ui/Hero';
 import { LoadingScreen } from '@/components/ui/LoadingScreen';
 import { NavButtons } from '@/components/ui/NavButtons';
+import { PlaylistBar } from '@/components/ui/PlaylistBar';
 import { StoryContent } from '@/components/ui/StoryContent';
 import { StoryPanel } from '@/components/ui/StoryPanel';
 import { ThrowbacksPanel } from '@/components/ui/ThrowbacksPanel';
@@ -27,7 +28,11 @@ import { WebGLFallback } from '@/components/ui/WebGLFallback';
  *   z= 10  <WebGLFallback> (relative, inside main, only when tier='low')
  *   z= 30  <Hero>, <NavButtons>, <AudioToggle>
  *   z= 40  <FocusedCardModal>, <GiftModal>
- *   z= 50  <StoryPanel>, <LoadingScreen>
+ *   z= 50  <StoryPanel>, <GalleryPanel>, <CeremonyPanel>, <ThrowbacksPanel>,
+ *          <LoadingScreen>
+ *   z= 60  <PlaylistBar> — sits above the panels so the playlist stays
+ *          accessible while any of them are open. It's gated on
+ *          `hasEntered`, so the LoadingScreen still appears alone.
  *
  * `<StoryContent />` is a Server Component that reads + compiles the MDX
  * narrative; it is passed as children into the client `<StoryPanel />`.
@@ -50,6 +55,7 @@ export default function Page() {
         <GalleryPanel />
         <CeremonyPanel />
         <ThrowbacksPanel />
+        <PlaylistBar />
         <LoadingScreen />
       </main>
     </>

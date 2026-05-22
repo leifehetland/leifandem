@@ -21,7 +21,7 @@ export function NavButtons() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: hasEntered ? 1 : 0, y: hasEntered ? 0 : 12 }}
       transition={{ duration: 0.8, ease: 'easeOut', delay: hasEntered ? 0.6 : 0 }}
-      className="fixed inset-x-0 bottom-8 z-30 flex justify-center px-6"
+      className="fixed inset-x-0 bottom-[calc(6.5rem+env(safe-area-inset-bottom))] z-30 flex justify-center px-6"
       aria-hidden={!hasEntered}
       inert={!hasEntered}
     >

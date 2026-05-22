@@ -28,7 +28,7 @@ export function AudioToggle() {
       transition={{ duration: 0.6, ease: 'easeOut', delay: hasEntered ? 0.8 : 0 }}
       aria-hidden={!hasEntered}
       inert={!hasEntered}
-      className="pointer-events-auto fixed bottom-20 right-6 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-void/70 text-ink/60 shadow-sm backdrop-blur-md transition hover:bg-void/90 hover:text-ink"
+      className="pointer-events-auto fixed bottom-[calc(9.5rem+env(safe-area-inset-bottom))] right-6 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-void/70 text-ink/60 shadow-sm backdrop-blur-md transition hover:bg-void/90 hover:text-ink"
     >
       {isMuted ? <VolumeX size={18} aria-hidden="true" /> : <Volume2 size={18} aria-hidden="true" />}
     </motion.button>
