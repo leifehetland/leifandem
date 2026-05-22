@@ -1817,6 +1817,15 @@ export const mediaItems: readonly MediaItem[] = [
     alt: "Photo from primaryphotos: img_0414",
   },
   {
+    id: "primaryphotos-img_0416",
+    type: 'photo',
+    src: "/media/images/primaryphotos/img_0416.webp",
+    width: 842,
+    height: 1024,
+    caption: "One of our favorites.",
+    alt: "Photo from primaryphotos: img_0416",
+  },
+  {
     id: "primaryphotos-img_0422",
     type: 'photo',
     src: "/media/images/primaryphotos/img_0422.webp",

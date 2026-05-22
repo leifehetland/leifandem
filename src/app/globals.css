@@ -11,12 +11,12 @@
  *   green-glow    → muted sage                   (tertiary illustration tone)
  *   ink           → oxblood                      (body text alias)
  *
- * Font variables (--font-display, --font-script, --font-body) are injected
- * by next/font onto <html> at runtime; the @theme block references them so
- * Tailwind utility classes pick them up.
- *   --font-display → Boldonse        (h1 — bold display banner)
- *   --font-script  → Pinyon Script   (h2–h6 — formal italic script)
- *   --font-body    → Roboto          (prose, captions, labels)
+ * Font variables are injected by next/font onto <html> at runtime; the
+ * @theme block references them so Tailwind utility classes pick them up.
+ *   --font-display → Bebas Neue          (h1 — bold condensed banner)
+ *   --font-script  → Petit Formal Script (h2–h6 — delicate connected script)
+ *   --font-body    → Castoro             (prose, captions, labels — old-style serif)
+ *   --font-accent  → Amatic SC           (small uppercase tracking labels)
  */
 @theme {
   --color-void: #e8dccb;
@@ -31,7 +31,8 @@
   --color-sage: #a9b78c;
 
   /* Override Tailwind's font-sans so the body font applies globally */
-  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body), Georgia, 'Times New Roman', serif;
+  --font-accent: var(--font-accent, 'Amatic SC', cursive);
 }
 
 @layer base {
@@ -95,6 +96,11 @@
 }
 
 @layer utilities {
+  /* Amatic SC for small all-caps tracking labels. */
+  .font-accent {
+    font-family: var(--font-accent);
+  }
+
   /*
    * Warm heading treatment — a very soft terracotta drop-shadow instead of
    * the neon glow from the previous dark theme.

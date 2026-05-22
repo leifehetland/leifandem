@@ -5,13 +5,15 @@ import { motion } from 'framer-motion';
 import { useSceneStore } from '@/stores/sceneStore';
 
 /**
- * Bottom-center pill nav: Story + Gallery + Gifts.
+ * Bottom-center pill nav: Story + Gallery + Ceremony + Throwbacks + Gifts.
  * All buttons simply flip store flags; the modals/panels react.
  */
 export function NavButtons() {
   const hasEntered = useSceneStore((state) => state.hasEntered);
   const openStory = useSceneStore((state) => state.openStory);
   const openGallery = useSceneStore((state) => state.openGallery);
+  const openCeremony = useSceneStore((state) => state.openCeremony);
+  const openThrowbacks = useSceneStore((state) => state.openThrowbacks);
   const openGifts = useSceneStore((state) => state.openGifts);
 
   return (
@@ -37,6 +39,20 @@ export function NavButtons() {
           className="rounded-full px-3 py-2 text-sm tracking-wide text-ink/80 transition hover:bg-ink/8 sm:px-5"
         >
           Gallery
+        </button>
+        <button
+          type="button"
+          onClick={openCeremony}
+          className="rounded-full px-3 py-2 text-sm tracking-wide text-ink/80 transition hover:bg-ink/8 sm:px-5"
+        >
+          Ceremony
+        </button>
+        <button
+          type="button"
+          onClick={openThrowbacks}
+          className="rounded-full px-3 py-2 text-sm tracking-wide text-ink/80 transition hover:bg-ink/8 sm:px-5"
+        >
+          Throwbacks
         </button>
         <button
           type="button"

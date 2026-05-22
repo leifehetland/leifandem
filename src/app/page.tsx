@@ -1,5 +1,6 @@
 import { SceneBackground } from '@/components/scene/SceneBackground';
 import { AudioToggle } from '@/components/ui/AudioToggle';
+import { CeremonyPanel } from '@/components/ui/CeremonyPanel';
 import { FocusedCardModal } from '@/components/ui/FocusedCardModal';
 import { GalleryPanel } from '@/components/ui/GalleryPanel';
 import { GiftModal } from '@/components/ui/GiftModal';
@@ -8,6 +9,7 @@ import { LoadingScreen } from '@/components/ui/LoadingScreen';
 import { NavButtons } from '@/components/ui/NavButtons';
 import { StoryContent } from '@/components/ui/StoryContent';
 import { StoryPanel } from '@/components/ui/StoryPanel';
+import { ThrowbacksPanel } from '@/components/ui/ThrowbacksPanel';
 import { WebGLFallback } from '@/components/ui/WebGLFallback';
 
 /**
@@ -46,6 +48,8 @@ export default function Page() {
           <StoryContent />
         </StoryPanel>
         <GalleryPanel />
+        <CeremonyPanel />
+        <ThrowbacksPanel />
         <LoadingScreen />
       </main>
     </>

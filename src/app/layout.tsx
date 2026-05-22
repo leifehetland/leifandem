@@ -1,41 +1,55 @@
 import type { Metadata, Viewport } from 'next';
-import { Boldonse, Pinyon_Script, Roboto } from 'next/font/google';
+import { Amatic_SC, Bebas_Neue, Castoro, Petit_Formal_Script } from 'next/font/google';
 
 import './globals.css';
 import { MotionProvider } from '@/components/shared/MotionProvider';
 import { COUPLE, SITE } from '@/lib/constants';
 
 /**
- * h1 display font: Boldonse — condensed bold sans with ink-trap details,
- * matching the antique invite's all-caps banner. Single weight (400).
- * Exposed as --font-display; applied to h1 in globals.css.
+ * h1 display font: Bebas Neue — all-caps condensed grotesque, bold and
+ * architectural. Replaces Boldonse. Exposed as --font-display.
  */
-const boldonse = Boldonse({
+const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   variable: '--font-display',
   weight: '400',
   display: 'swap',
-  // Boldonse isn't in next/font's size-adjust DB yet — opt out of the warning.
   adjustFontFallback: false,
 });
 
 /**
- * h2–h6 script font: Pinyon Script — formal italic with Spencerian swash
- * capitals, matching the "please join us / Montauk / May" copy on the invite.
- * Single weight (400). Exposed as --font-script.
+ * h2–h6 script font: Petit Formal Script — delicate connected script with
+ * a light, airy stroke weight. Exposed as --font-script.
  */
-const pinyonScript = Pinyon_Script({
+const petitFormalScript = Petit_Formal_Script({
   subsets: ['latin'],
   variable: '--font-script',
   weight: '400',
   display: 'swap',
 });
 
-/** Body font: Roboto for all prose, captions, labels, and links. */
-const roboto = Roboto({
+/**
+ * Body font: Castoro — an elegant old-style serif with good reading rhythm.
+ * Exposed as --font-body; replaces Roboto.
+ */
+const castoro = Castoro({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: ['300', '400', '500'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+/**
+ * Accent font: Amatic SC — hand-lettered small caps. Available via
+ * --font-accent for small uppercase tracking labels (e.g. "You're invited",
+ * "Tap to enter"). Not applied globally; use the `font-accent` Tailwind
+ * utility where needed.
+ */
+const amaticSC = Amatic_SC({
+  subsets: ['latin'],
+  variable: '--font-accent',
+  weight: ['400', '700'],
   display: 'swap',
 });
 
@@ -73,7 +87,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${boldonse.variable} ${pinyonScript.variable} ${roboto.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${bebasNeue.variable} ${petitFormalScript.variable} ${castoro.variable} ${amaticSC.variable}`}>
       <body data-couple={`${COUPLE.partnerOne}-${COUPLE.partnerTwo}`}>
         <a
           href="#gifts"
