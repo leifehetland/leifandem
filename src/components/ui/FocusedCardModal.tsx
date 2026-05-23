@@ -6,6 +6,8 @@ import { useCallback, useMemo } from 'react';
 
 import { useEscapeKey } from '@/hooks/useEscapeKey';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useT } from '@/hooks/useT';
+import { bunzItems } from '@/lib/bunz-manifest';
 import { mediaItems } from '@/lib/media-manifest';
 import { useSceneStore } from '@/stores/sceneStore';
 
@@ -18,14 +20,16 @@ export function FocusedCardModal() {
   const focusedId = useSceneStore((state) => state.focusedCardId);
   const setFocusedCard = useSceneStore((state) => state.setFocusedCard);
 
+  const allItems = useMemo(() => [...mediaItems, ...bunzItems], []);
   const item = useMemo(
-    () => (focusedId ? mediaItems.find((entry) => entry.id === focusedId) ?? null : null),
-    [focusedId],
+    () => (focusedId ? allItems.find((entry) => entry.id === focusedId) ?? null : null),
+    [focusedId, allItems],
   );
 
   const close = useCallback(() => setFocusedCard(null), [setFocusedCard]);
   const trapRef = useFocusTrap<HTMLDivElement>(item !== null);
   useEscapeKey(close, item !== null);
+  const t = useT();
 
   return (
     <AnimatePresence>
@@ -42,7 +46,7 @@ export function FocusedCardModal() {
         >
           <button
             type="button"
-            aria-label="Close"
+            aria-label={t.close}
             onClick={close}
             className="absolute inset-0 bg-ink/25 backdrop-blur-md"
           />
@@ -58,7 +62,7 @@ export function FocusedCardModal() {
             <button
               type="button"
               onClick={close}
-              aria-label="Close"
+              aria-label={t.close}
               className="absolute right-3 top-3 z-10 rounded-full bg-ink/8 p-2 text-ink/60 transition hover:bg-ink/15 hover:text-ink"
             >
               <X size={18} aria-hidden="true" />

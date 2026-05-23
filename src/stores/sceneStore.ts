@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-import type { DeviceTier } from '@/types';
+import type { DeviceTier, Locale } from '@/types';
 
 /**
  * Shared state across the canvas/HTML boundary.
@@ -40,9 +40,18 @@ interface SceneStore {
   // Device tier (set once at boot)
   tier: DeviceTier;
   setTier: (t: DeviceTier) => void;
+
+  // Locale
+  locale: Locale;
+  setLocale: (l: Locale) => void;
+
+  // Bunz secret gallery
+  isBunzOpen: boolean;
+  openBunz: () => void;
+  closeBunz: () => void;
 }
 
-type PersistedFields = Pick<SceneStore, 'isMuted' | 'tier'>;
+type PersistedFields = Pick<SceneStore, 'isMuted' | 'tier' | 'locale'>;
 
 /**
  * Persist only `isMuted` and `tier` to sessionStorage — per SPECS.md §3.
@@ -82,6 +91,13 @@ export const useSceneStore = create<SceneStore>()(
 
       tier: 'high',
       setTier: (t) => set({ tier: t }),
+
+      locale: 'en',
+      setLocale: (l) => set({ locale: l }),
+
+      isBunzOpen: false,
+      openBunz: () => set({ isBunzOpen: true }),
+      closeBunz: () => set({ isBunzOpen: false }),
     }),
     {
       name: 'wedding-splash:scene',
@@ -91,6 +107,7 @@ export const useSceneStore = create<SceneStore>()(
       partialize: (state): PersistedFields => ({
         isMuted: state.isMuted,
         tier: state.tier,
+        locale: state.locale,
       }),
     },
   ),

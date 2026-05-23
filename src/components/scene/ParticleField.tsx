@@ -55,7 +55,7 @@ const COLOR_TABLE: ReadonlyArray<readonly [THREE.Color, number]> = [
   [new THREE.Color('#E8B43A'), 0.06] as const, // amber gold
   [new THREE.Color('#FF9248'), 0.05] as const, // sunset orange
   // ── Jewel cools (~20 %) — counterpoint that makes the warms pop ──────────
-  [new THREE.Color('#8B5CC4'), 0.06] as const, // royal violet
+  [new THREE.Color('#B07FFF'), 0.06] as const, // bright lavender (additive-safe)
   [new THREE.Color('#7B8DDB'), 0.05] as const, // periwinkle
   [new THREE.Color('#3FB8AF'), 0.05] as const, // teal
   [new THREE.Color('#5BC9D6'), 0.04] as const, // aqua
@@ -64,7 +64,7 @@ const COLOR_TABLE: ReadonlyArray<readonly [THREE.Color, number]> = [
   [new THREE.Color('#7FD9B0'), 0.04] as const, // mint
   // ── Highlights (~11 %) ───────────────────────────────────────────────────
   [new THREE.Color('#F9E5C7'), 0.06] as const, // warm cream sparkle
-  [new THREE.Color('#A6342D'), 0.05] as const, // garnet deep
+  [new THREE.Color('#FF4D6D'), 0.05] as const, // bright crimson (additive-safe)
 ];
 
 /** Cumulative thresholds for weighted random color selection. */
@@ -191,7 +191,7 @@ export function ParticleField() {
   if (count === 0 || !sprite) return null;
 
   return (
-    <points ref={pointsRef} frustumCulled={false}>
+    <points ref={pointsRef} frustumCulled={false} renderOrder={1}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
@@ -207,21 +207,21 @@ export function ParticleField() {
         />
       </bufferGeometry>
       {/*
-       * NormalBlending on a light background: additive blending washes to
-       * white on ivory. Normal blending lets the saturated palette show
-       * through as colourful motes drifting across the ivory canvas. The
-       * opacity is tuned just high enough that the jewel tones read
-       * distinctly without flattening the warm dominant hues.
+       * AdditiveBlending: each particle adds light to what's behind it,
+       * producing a genuine glow against the ivory canvas. Darker palette
+       * entries were replaced with brighter equivalents so every hue stays
+       * visible under additive math (dark + ivory ≈ invisible). Opacity
+       * tuned so the field reads as vivid but doesn't wash out the cards.
        */}
       <pointsMaterial
-        size={0.15}
+        size={0.2}
         sizeAttenuation
         vertexColors
         transparent
         depthWrite={false}
-        blending={THREE.NormalBlending}
+        blending={THREE.AdditiveBlending}
         map={sprite}
-        opacity={0.7}
+        opacity={0.85}
       />
     </points>
   );

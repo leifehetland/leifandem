@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { useSceneStore } from '@/stores/sceneStore';
 
 import { CameraRig } from './CameraRig';
-import { Cards } from './Cards';
+import { CloudRig } from './CloudRig';
 import { Effects } from './Effects';
 import { ParticleField } from './ParticleField';
 
@@ -26,7 +26,7 @@ export function Scene() {
       <CameraRig />
       <ambientLight intensity={0.9} />
       <ParticleField />
-      <Cards />
+      <CloudRig />
       <Effects />
     </Canvas>
   );

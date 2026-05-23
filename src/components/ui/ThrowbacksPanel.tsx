@@ -1,5 +1,6 @@
 'use client';
 
+import { useT } from '@/hooks/useT';
 import { mediaItems } from '@/lib/media-manifest';
 import { useSceneStore } from '@/stores/sceneStore';
 import type { PhotoItem, VideoItem } from '@/types';
@@ -19,14 +20,15 @@ const throwbackItems = mediaItems.filter(
 export function ThrowbacksPanel() {
   const isOpen = useSceneStore((state) => state.isThrowbacksOpen);
   const close = useSceneStore((state) => state.closeThrowbacks);
+  const t = useT();
 
   return (
     <MediaGrid
       items={throwbackItems}
       isOpen={isOpen}
       close={close}
-      title="Throwbacks"
-      ariaLabel="Throwback photos"
+      title={t.throwbacksTitle}
+      ariaLabel={t.throwbacksAriaLabel}
     />
   );
 }

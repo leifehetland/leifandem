@@ -16,3 +16,5 @@ export type {
 } from '@/lib/media-manifest';
 
 export type DeviceTier = 'high' | 'mid' | 'low';
+
+export type Locale = 'en' | 'no';

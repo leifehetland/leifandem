@@ -20,7 +20,7 @@ const OUT_FILE = join(ROOT, 'src/lib/media-manifest.ts');
 
 const FOLDER_LABELS = {
   '.': 'A moment from us.',
-  atlceremony: 'Our Atlanta ceremony.',
+  atlceremony: 'Our ceremony and reception.',
   polaroidscans: 'A polaroid we kept.',
   primaryphotos: 'One of our favorites.',
   throwbacks: 'A throwback.',

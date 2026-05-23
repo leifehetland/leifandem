@@ -1,6 +1,6 @@
 'use client';
 
-import { useVideoTexture } from '@react-three/drei';
+import { Billboard, useVideoTexture } from '@react-three/drei';
 import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
@@ -43,15 +43,14 @@ export function VideoCard({ item }: { item: WithPosition<VideoItem> }) {
   const width = height * aspect;
 
   const seedX = item.position[0];
-  const seedY = item.position[1];
 
   useFrame((state) => {
     const group = groupRef.current;
     if (!group) return;
     const t = state.clock.elapsedTime;
-    group.rotation.y = (item.rotation?.[1] ?? 0) + Math.sin(t * 0.25 + seedX) * 0.06;
-    group.rotation.x = (item.rotation?.[0] ?? 0) + Math.sin(t * 0.32 + seedY) * 0.03;
-    group.position.y = item.position[1] + Math.sin(t * 0.4 + seedX) * 0.08;
+    // Position bob is a local offset relative to the Billboard's world position.
+    // Rotation intentionally omitted — Billboard handles camera-facing.
+    group.position.y = Math.sin(t * 0.4 + seedX) * 0.08;
 
     const targetScale = hovered || isFocused ? HOVER_SCALE : 1;
     const current = group.scale.x;
@@ -76,33 +75,36 @@ export function VideoCard({ item }: { item: WithPosition<VideoItem> }) {
   };
 
   return (
-    <group ref={groupRef} position={item.position} rotation={item.rotation ?? [0, 0, 0]}>
-      <mesh position={[0, 0, -0.01]}>
-        <planeGeometry args={[width + 0.09, height + 0.09]} />
-        <meshBasicMaterial
-          color={PALETTE.peach}
-          transparent
-          opacity={hovered || isFocused ? 0.85 : 0.45}
-          blending={THREE.AdditiveBlending}
-          depthWrite={false}
-          toneMapped={false}
-        />
-      </mesh>
+    // Billboard keeps the card facing the camera even as CloudRig rotates.
+    <Billboard position={item.position}>
+      <group ref={groupRef}>
+        <mesh position={[0, 0, -0.01]}>
+          <planeGeometry args={[width + 0.09, height + 0.09]} />
+          <meshBasicMaterial
+            color={PALETTE.peach}
+            transparent
+            opacity={hovered || isFocused ? 0.85 : 0.45}
+            blending={THREE.AdditiveBlending}
+            depthWrite={false}
+            toneMapped={false}
+          />
+        </mesh>
 
-      <mesh>
-        <planeGeometry args={[width, height]} />
-        <meshBasicMaterial map={texture} toneMapped={false} />
-      </mesh>
+        <mesh>
+          <planeGeometry args={[width, height]} />
+          <meshBasicMaterial map={texture} toneMapped={false} />
+        </mesh>
 
-      <mesh
-        position={[0, 0, 0.01]}
-        onPointerOver={handleOver}
-        onPointerOut={handleOut}
-        onClick={handleClick}
-      >
-        <planeGeometry args={[width * 1.5, height * 1.5]} />
-        <meshBasicMaterial transparent opacity={0} depthWrite={false} />
-      </mesh>
-    </group>
+        <mesh
+          position={[0, 0, 0.01]}
+          onPointerOver={handleOver}
+          onPointerOut={handleOut}
+          onClick={handleClick}
+        >
+          <planeGeometry args={[width * 1.5, height * 1.5]} />
+          <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+        </mesh>
+      </group>
+    </Billboard>
   );
 }

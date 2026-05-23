@@ -58,7 +58,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/1000048500.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 1000048500",
   },
   {
@@ -67,7 +67,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/1000048540.webp",
     width: 958,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 1000048540",
   },
   {
@@ -76,7 +76,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17949.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17949",
   },
   {
@@ -85,7 +85,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17951.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17951",
   },
   {
@@ -94,7 +94,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17952.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17952",
   },
   {
@@ -103,7 +103,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17953.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17953",
   },
   {
@@ -112,7 +112,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17954.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17954",
   },
   {
@@ -121,7 +121,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17955.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17955",
   },
   {
@@ -130,7 +130,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/17956.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 17956",
   },
   {
@@ -139,7 +139,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/20260516_150604.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 20260516_150604",
   },
   {
@@ -148,7 +148,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/20260516_153349.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 20260516_153349",
   },
   {
@@ -157,7 +157,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/20260516_155129.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 20260516_155129",
   },
   {
@@ -166,7 +166,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/20260516_155133.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 20260516_155133",
   },
   {
@@ -175,7 +175,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/3381189032861976609.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 3381189032861976609",
   },
   {
@@ -184,7 +184,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/3665934879011235933.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 3665934879011235933",
   },
   {
@@ -193,17 +193,8 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/6535916759005639965.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: 6535916759005639965",
-  },
-  {
-    id: "atlceremony-image000000",
-    type: 'photo',
-    src: "/media/images/atlceremony/image000000.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: image000000",
   },
   {
     id: "atlceremony-image000000-10",
@@ -211,7 +202,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-10.webp",
     width: 400,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-10",
   },
   {
@@ -220,7 +211,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-11.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-11",
   },
   {
@@ -229,7 +220,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-3.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-3",
   },
   {
@@ -238,7 +229,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-4.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-4",
   },
   {
@@ -247,7 +238,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-5.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-5",
   },
   {
@@ -256,7 +247,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-6.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-6",
   },
   {
@@ -265,7 +256,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-7.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-7",
   },
   {
@@ -274,7 +265,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-8.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-8",
   },
   {
@@ -283,7 +274,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000000-9.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000000-9",
   },
   {
@@ -292,7 +283,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/image000001.webp",
     width: 767,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: image000001",
   },
   {
@@ -301,7 +292,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0093.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0093",
   },
   {
@@ -310,7 +301,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0095.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0095",
   },
   {
@@ -319,7 +310,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0097.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0097",
   },
   {
@@ -328,7 +319,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0100.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0100",
   },
   {
@@ -337,7 +328,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0102.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0102",
   },
   {
@@ -346,7 +337,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0103.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0103",
   },
   {
@@ -355,7 +346,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0105.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0105",
   },
   {
@@ -364,7 +355,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0107.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0107",
   },
   {
@@ -373,7 +364,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0108.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0108",
   },
   {
@@ -382,7 +373,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0124.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0124",
   },
   {
@@ -391,7 +382,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0138.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0138",
   },
   {
@@ -400,7 +391,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0323.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0323",
   },
   {
@@ -409,7 +400,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0325.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0325",
   },
   {
@@ -418,7 +409,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0375.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0375",
   },
   {
@@ -427,7 +418,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0380.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0380",
   },
   {
@@ -436,7 +427,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0425.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0425",
   },
   {
@@ -445,7 +436,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0426.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0426",
   },
   {
@@ -454,7 +445,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0428.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0428",
   },
   {
@@ -463,7 +454,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0432.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0432",
   },
   {
@@ -472,7 +463,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_0434.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_0434",
   },
   {
@@ -481,7 +472,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2620.webp",
     width: 731,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2620",
   },
   {
@@ -490,7 +481,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2621.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2621",
   },
   {
@@ -499,7 +490,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2652.webp",
     width: 731,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2652",
   },
   {
@@ -508,7 +499,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2664.webp",
     width: 576,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2664",
   },
   {
@@ -517,7 +508,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2665.webp",
     width: 576,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2665",
   },
   {
@@ -526,7 +517,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2666.webp",
     width: 731,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2666",
   },
   {
@@ -535,7 +526,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2668.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2668",
   },
   {
@@ -544,7 +535,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2672.webp",
     width: 1024,
     height: 819,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2672",
   },
   {
@@ -553,7 +544,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2677.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2677",
   },
   {
@@ -562,7 +553,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2679.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2679",
   },
   {
@@ -571,7 +562,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2681.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2681",
   },
   {
@@ -580,7 +571,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2685.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2685",
   },
   {
@@ -589,7 +580,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2686.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2686",
   },
   {
@@ -598,7 +589,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2688.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2688",
   },
   {
@@ -607,7 +598,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2691.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2691",
   },
   {
@@ -616,7 +607,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2694.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2694",
   },
   {
@@ -625,7 +616,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2702.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2702",
   },
   {
@@ -634,7 +625,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2706.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2706",
   },
   {
@@ -643,7 +634,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2707.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2707",
   },
   {
@@ -652,7 +643,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2725.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2725",
   },
   {
@@ -661,7 +652,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2736.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2736",
   },
   {
@@ -670,7 +661,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2740.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2740",
   },
   {
@@ -679,7 +670,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2741.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2741",
   },
   {
@@ -688,7 +679,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2745.webp",
     width: 682,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2745",
   },
   {
@@ -697,7 +688,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2745-2.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2745-2",
   },
   {
@@ -706,7 +697,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2746.webp",
     width: 682,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2746",
   },
   {
@@ -715,7 +706,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2746-2.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2746-2",
   },
   {
@@ -724,7 +715,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2749.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2749",
   },
   {
@@ -733,7 +724,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2750.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2750",
   },
   {
@@ -742,7 +733,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2753.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2753",
   },
   {
@@ -751,7 +742,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2755.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2755",
   },
   {
@@ -760,7 +751,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2759.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2759",
   },
   {
@@ -769,7 +760,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2762.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2762",
   },
   {
@@ -778,7 +769,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2763.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2763",
   },
   {
@@ -787,7 +778,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2767.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2767",
   },
   {
@@ -796,7 +787,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2769.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2769",
   },
   {
@@ -805,26 +796,8 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2773.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2773",
-  },
-  {
-    id: "atlceremony-img_2773-2",
-    type: 'photo',
-    src: "/media/images/atlceremony/img_2773-2.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: img_2773-2",
-  },
-  {
-    id: "atlceremony-img_2773-3",
-    type: 'photo',
-    src: "/media/images/atlceremony/img_2773-3.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: img_2773-3",
   },
   {
     id: "atlceremony-img_2775",
@@ -832,17 +805,8 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2775.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2775",
-  },
-  {
-    id: "atlceremony-img_2775-2",
-    type: 'photo',
-    src: "/media/images/atlceremony/img_2775-2.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: img_2775-2",
   },
   {
     id: "atlceremony-img_2775-3",
@@ -850,7 +814,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2775-3.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2775-3",
   },
   {
@@ -859,17 +823,8 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2777.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2777",
-  },
-  {
-    id: "atlceremony-img_2777-2",
-    type: 'photo',
-    src: "/media/images/atlceremony/img_2777-2.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: img_2777-2",
   },
   {
     id: "atlceremony-img_2777-3",
@@ -877,7 +832,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2777-3.webp",
     width: 682,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2777-3",
   },
   {
@@ -886,7 +841,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2783.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2783",
   },
   {
@@ -895,7 +850,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2785.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2785",
   },
   {
@@ -904,7 +859,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2789.webp",
     width: 780,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2789",
   },
   {
@@ -913,7 +868,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2794.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2794",
   },
   {
@@ -922,7 +877,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2797.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2797",
   },
   {
@@ -931,7 +886,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2802.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2802",
   },
   {
@@ -940,7 +895,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2803.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2803",
   },
   {
@@ -949,7 +904,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2807.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2807",
   },
   {
@@ -958,7 +913,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2814.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2814",
   },
   {
@@ -967,7 +922,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2816.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2816",
   },
   {
@@ -976,7 +931,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2817.webp",
     width: 819,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2817",
   },
   {
@@ -985,7 +940,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2824.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2824",
   },
   {
@@ -994,7 +949,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2826.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2826",
   },
   {
@@ -1003,7 +958,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2828.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2828",
   },
   {
@@ -1012,7 +967,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2831.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2831",
   },
   {
@@ -1021,7 +976,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2835.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2835",
   },
   {
@@ -1030,7 +985,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_2841.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_2841",
   },
   {
@@ -1039,7 +994,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7235.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7235",
   },
   {
@@ -1048,7 +1003,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7236.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7236",
   },
   {
@@ -1057,7 +1012,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7237.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7237",
   },
   {
@@ -1066,7 +1021,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7238.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7238",
   },
   {
@@ -1075,7 +1030,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7240.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7240",
   },
   {
@@ -1084,7 +1039,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7245.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7245",
   },
   {
@@ -1093,7 +1048,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7246.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7246",
   },
   {
@@ -1102,7 +1057,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7248.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7248",
   },
   {
@@ -1111,7 +1066,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7250.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7250",
   },
   {
@@ -1120,7 +1075,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7251.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7251",
   },
   {
@@ -1129,7 +1084,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7256.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7256",
   },
   {
@@ -1138,7 +1093,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7257.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7257",
   },
   {
@@ -1147,7 +1102,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7262.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7262",
   },
   {
@@ -1156,7 +1111,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7263.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7263",
   },
   {
@@ -1165,7 +1120,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7456.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7456",
   },
   {
@@ -1174,7 +1129,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7476.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7476",
   },
   {
@@ -1183,7 +1138,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7480.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7480",
   },
   {
@@ -1192,7 +1147,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7481.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7481",
   },
   {
@@ -1201,7 +1156,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7489.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7489",
   },
   {
@@ -1210,7 +1165,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7493.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7493",
   },
   {
@@ -1219,7 +1174,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_7496.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_7496",
   },
   {
@@ -1228,7 +1183,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8121.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8121",
   },
   {
@@ -1237,7 +1192,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8122.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8122",
   },
   {
@@ -1246,7 +1201,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8125.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8125",
   },
   {
@@ -1255,7 +1210,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8126.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8126",
   },
   {
@@ -1264,7 +1219,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8130.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8130",
   },
   {
@@ -1273,7 +1228,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8133.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8133",
   },
   {
@@ -1282,7 +1237,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8136.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8136",
   },
   {
@@ -1291,7 +1246,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8137.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8137",
   },
   {
@@ -1300,7 +1255,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8138.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8138",
   },
   {
@@ -1309,7 +1264,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8139.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8139",
   },
   {
@@ -1318,7 +1273,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8141.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8141",
   },
   {
@@ -1327,7 +1282,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8145.webp",
     width: 1024,
     height: 768,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8145",
   },
   {
@@ -1336,7 +1291,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8147.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8147",
   },
   {
@@ -1345,7 +1300,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8150.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8150",
   },
   {
@@ -1354,7 +1309,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8158.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8158",
   },
   {
@@ -1363,7 +1318,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8160.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8160",
   },
   {
@@ -1372,7 +1327,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8162.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8162",
   },
   {
@@ -1381,7 +1336,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8167.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8167",
   },
   {
@@ -1390,7 +1345,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8171.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8171",
   },
   {
@@ -1399,7 +1354,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8173.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8173",
   },
   {
@@ -1408,7 +1363,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8178.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8178",
   },
   {
@@ -1417,7 +1372,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8179.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8179",
   },
   {
@@ -1426,7 +1381,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8180.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8180",
   },
   {
@@ -1435,7 +1390,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8181.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8181",
   },
   {
@@ -1444,7 +1399,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8183.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8183",
   },
   {
@@ -1453,7 +1408,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8185.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8185",
   },
   {
@@ -1462,7 +1417,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8186.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8186",
   },
   {
@@ -1471,7 +1426,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8187.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8187",
   },
   {
@@ -1480,7 +1435,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8189.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8189",
   },
   {
@@ -1489,7 +1444,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8190.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8190",
   },
   {
@@ -1498,7 +1453,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8191.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8191",
   },
   {
@@ -1507,7 +1462,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8192.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8192",
   },
   {
@@ -1516,7 +1471,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8193.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8193",
   },
   {
@@ -1525,7 +1480,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8194.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8194",
   },
   {
@@ -1534,7 +1489,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8195.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8195",
   },
   {
@@ -1543,7 +1498,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8196.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8196",
   },
   {
@@ -1552,7 +1507,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8197.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8197",
   },
   {
@@ -1561,7 +1516,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8198.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8198",
   },
   {
@@ -1570,7 +1525,7 @@ export const mediaItems: readonly MediaItem[] = [
     src: "/media/images/atlceremony/img_8199.webp",
     width: 768,
     height: 1024,
-    caption: "Our Atlanta ceremony.",
+    caption: "Our ceremony and reception.",
     alt: "Photo from atlceremony: img_8199",
   },
   {

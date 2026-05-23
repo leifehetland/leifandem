@@ -6,67 +6,71 @@ import type { ReactNode } from 'react';
 
 import { useEscapeKey } from '@/hooks/useEscapeKey';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useT } from '@/hooks/useT';
 import { useSceneStore } from '@/stores/sceneStore';
 
 /**
  * Slide-in story panel (right side on desktop, full-screen on mobile).
  *
- * The compiled MDX content is passed in as `children` from a server
- * component (`StoryContent`) so this file stays purely client/visual.
+ * Both locale versions are compiled server-side and passed in as separate
+ * ReactNode props so the client can swap between them instantly without a
+ * server round-trip.
  */
-export function StoryPanel({ children }: { children: ReactNode }) {
+export function StoryPanel({
+  enContent,
+  noContent,
+}: {
+  enContent: ReactNode;
+  noContent: ReactNode;
+}) {
   const isOpen = useSceneStore((state) => state.isStoryOpen);
   const close = useSceneStore((state) => state.closeStory);
+  const locale = useSceneStore((state) => state.locale);
   const trapRef = useFocusTrap<HTMLElement>(isOpen);
+  const t = useT();
 
   useEscapeKey(close, isOpen);
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <>
-          <motion.button
-            type="button"
-            aria-label="Close story"
-            onClick={close}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="pointer-events-auto fixed inset-0 z-40 bg-ink/20 backdrop-blur-sm"
-          />
+        <motion.aside
+          ref={trapRef}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="story-panel-title"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
+          className="pointer-events-auto fixed inset-0 z-50 flex flex-col bg-void/75 backdrop-blur-sm"
+          style={{ paddingBottom: 'var(--playlist-bar-offset)' }}
+        >
+          {/* Header — tight newspaper masthead */}
+          <div className="flex items-start justify-between border-b border-ink/10 px-5 py-3 sm:px-8 sm:py-4">
+            <h2
+              id="story-panel-title"
+              className="text-glow-cyan font-bold leading-none tracking-tight text-[3.25rem] sm:text-[8rem]"
+            >
+              {t.ourStory}
+            </h2>
+            <button
+              type="button"
+              onClick={close}
+              aria-label={t.close}
+              className="mt-1 rounded-full p-2 text-ink/50 transition hover:bg-ink/8 hover:text-ink"
+            >
+              <X size={22} aria-hidden="true" />
+            </button>
+          </div>
 
-          <motion.aside
-            ref={trapRef}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="story-panel-title"
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="pointer-events-auto fixed top-0 right-0 bottom-[var(--playlist-bar-offset)] z-50 flex w-full max-w-[480px] flex-col border-l border-ink/10 bg-void/97 shadow-[0_0_60px_-10px_rgba(196,114,78,0.2)]"
-          >
-            <div className="flex items-center justify-between border-b border-ink/10 px-6 py-4">
-              <h2
-                id="story-panel-title"
-                className="text-glow-cyan text-lg font-light tracking-wide"
-              >
-                Our Story
-              </h2>
-              <button
-                type="button"
-                onClick={close}
-                aria-label="Close"
-                className="rounded-full p-2 text-ink/50 transition hover:bg-ink/8 hover:text-ink"
-              >
-                <X size={18} aria-hidden="true" />
-              </button>
+          {/* Scrollable body — tighter newspaper gutters */}
+          <div className="flex-1 overflow-y-auto">
+            <div className="story-prose mx-auto w-full max-w-2xl px-4 py-4 sm:px-5 sm:py-5">
+              {locale === 'en' ? enContent : noContent}
             </div>
-
-            <div className="story-prose flex-1 overflow-y-auto px-6 py-6">{children}</div>
-          </motion.aside>
-        </>
+          </div>
+        </motion.aside>
       )}
     </AnimatePresence>
   );

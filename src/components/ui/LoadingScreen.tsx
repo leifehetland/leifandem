@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 
+import { useT } from '@/hooks/useT';
 import { COUPLE } from '@/lib/constants';
 import { useSceneStore } from '@/stores/sceneStore';
 
@@ -29,6 +30,7 @@ const ROTATIONS = [-2.5, 1.8, -1.2, 1.5, -2.0, 2.2] as const;
 export function LoadingScreen() {
   const hasEntered = useSceneStore((state) => state.hasEntered);
   const setHasEntered = useSceneStore((state) => state.setHasEntered);
+  const t = useT();
 
   return (
     <AnimatePresence>
@@ -56,12 +58,7 @@ export function LoadingScreen() {
                   style={{ transform: `rotate(${ROTATIONS[i]}deg)` }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={src}
-                    alt=""
-                    className="h-full w-full object-cover"
-                    loading="eager"
-                  />
+                  <img src={src} alt="" className="h-full w-full object-cover" loading="eager" />
                 </div>
               ))}
             </div>
@@ -76,9 +73,9 @@ export function LoadingScreen() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-shadow-warm font-accent text-lg uppercase tracking-[0.4em] text-ink sm:text-xl"
+              className="text-shadow-warm font-accent text-4xl leading-snug text-ink sm:text-5xl"
             >
-              Surprise! We tied the knot...
+              {t.surpriseTagline}
             </motion.p>
 
             <motion.h1
@@ -96,9 +93,9 @@ export function LoadingScreen() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 1.4, repeat: Infinity, repeatType: 'reverse' }}
-              className="text-shadow-warm font-accent mt-16 text-xl uppercase tracking-[0.35em] text-ink sm:text-2xl"
+              className="text-shadow-warm font-accent mt-16 text-2xl leading-snug text-ink sm:text-3xl"
             >
-              Tap to enter
+              {t.tapToEnter}
             </motion.p>
           </div>
         </motion.button>
