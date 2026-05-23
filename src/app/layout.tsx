@@ -76,6 +76,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  /*
+   * favicon.ico and apple-icon.png live in src/app/ — Next.js auto-emits the
+   * appropriate <link> tags from those filename conventions. The manifest
+   * advertises the 192/512 android-chrome icons for PWA installs.
+   */
+  manifest: '/manifest.webmanifest',
 };
 
 export const viewport: Viewport = {
