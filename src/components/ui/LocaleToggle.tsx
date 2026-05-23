@@ -22,7 +22,7 @@ export function LocaleToggle() {
   }, [locale]);
 
   return (
-    <div className="pointer-events-auto fixed left-4 top-4 z-30 flex items-center gap-1.5 rounded-full border border-ink/10 bg-void/70 px-3 py-1.5 shadow-sm backdrop-blur-md">
+    <div className="pointer-events-auto fixed left-4 top-4 z-30 hidden items-center gap-1.5 rounded-full border border-ink/10 bg-void/70 px-3 py-1.5 shadow-sm backdrop-blur-md sm:flex">
       <button
         type="button"
         onClick={() => setLocale('en')}
