@@ -39,10 +39,6 @@ export const translations = {
     // Locale toggle
     switchToNorwegian: 'Switch to Norwegian',
     switchToEnglish: 'Switch to English',
-
-    // Bunz secret gallery
-    bunzTitle: 'Bunz 🐱',
-    bunzAriaLabel: 'Bunz photo gallery',
   },
 
   no: {
@@ -78,10 +74,6 @@ export const translations = {
     // Locale toggle
     switchToNorwegian: 'Bytt til norsk',
     switchToEnglish: 'Bytt til engelsk',
-
-    // Bunz secret gallery
-    bunzTitle: 'Bunz 🐱',
-    bunzAriaLabel: 'Bildegalleri for Bunz',
   },
 } as const;
 

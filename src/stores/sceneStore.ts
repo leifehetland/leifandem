@@ -44,11 +44,6 @@ interface SceneStore {
   // Locale
   locale: Locale;
   setLocale: (l: Locale) => void;
-
-  // Bunz secret gallery
-  isBunzOpen: boolean;
-  openBunz: () => void;
-  closeBunz: () => void;
 }
 
 type PersistedFields = Pick<SceneStore, 'isMuted' | 'tier' | 'locale'>;
@@ -94,10 +89,6 @@ export const useSceneStore = create<SceneStore>()(
 
       locale: 'en',
       setLocale: (l) => set({ locale: l }),
-
-      isBunzOpen: false,
-      openBunz: () => set({ isBunzOpen: true }),
-      closeBunz: () => set({ isBunzOpen: false }),
     }),
     {
       name: 'wedding-splash:scene',

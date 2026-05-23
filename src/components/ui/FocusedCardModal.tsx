@@ -7,7 +7,6 @@ import { useCallback, useMemo } from 'react';
 import { useEscapeKey } from '@/hooks/useEscapeKey';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useT } from '@/hooks/useT';
-import { bunzItems } from '@/lib/bunz-manifest';
 import { mediaItems } from '@/lib/media-manifest';
 import { useSceneStore } from '@/stores/sceneStore';
 
@@ -20,10 +19,9 @@ export function FocusedCardModal() {
   const focusedId = useSceneStore((state) => state.focusedCardId);
   const setFocusedCard = useSceneStore((state) => state.setFocusedCard);
 
-  const allItems = useMemo(() => [...mediaItems, ...bunzItems], []);
   const item = useMemo(
-    () => (focusedId ? allItems.find((entry) => entry.id === focusedId) ?? null : null),
-    [focusedId, allItems],
+    () => (focusedId ? mediaItems.find((entry) => entry.id === focusedId) ?? null : null),
+    [focusedId],
   );
 
   const close = useCallback(() => setFocusedCard(null), [setFocusedCard]);

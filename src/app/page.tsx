@@ -1,6 +1,5 @@
 import { SceneBackground } from '@/components/scene/SceneBackground';
 // import { AudioToggle } from '@/components/ui/AudioToggle';
-// import { BunzPanel } from '@/components/ui/BunzPanel'; // temporarily hidden
 import { CeremonyPanel } from '@/components/ui/CeremonyPanel';
 import { LocaleToggle } from '@/components/ui/LocaleToggle';
 import { FocusedCardModal } from '@/components/ui/FocusedCardModal';
@@ -56,7 +55,6 @@ export default function Page() {
           enContent={<StoryContent locale="en" />}
           noContent={<StoryContent locale="no" />}
         />
-        {/* <BunzPanel /> -- temporarily hidden; restore alongside BunzLink in story MDX */}
         <CeremonyPanel />
         <ThrowbacksPanel />
         <PlaylistBar />
