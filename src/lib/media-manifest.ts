@@ -224,15 +224,6 @@ export const mediaItems: readonly MediaItem[] = [
     alt: "Photo from atlceremony: image000000-11",
   },
   {
-    id: "atlceremony-image000000-2",
-    type: 'photo',
-    src: "/media/images/atlceremony/image000000-2.webp",
-    width: 768,
-    height: 1024,
-    caption: "Our Atlanta ceremony.",
-    alt: "Photo from atlceremony: image000000-2",
-  },
-  {
     id: "atlceremony-image000000-3",
     type: 'photo',
     src: "/media/images/atlceremony/image000000-3.webp",
