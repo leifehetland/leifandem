@@ -4,10 +4,10 @@ import { mediaItems } from '@/lib/media-manifest';
 import { useSceneStore } from '@/stores/sceneStore';
 import type { PhotoItem, VideoItem } from '@/types';
 
-import { MediaCarousel } from './MediaCarousel';
+import { MediaGrid } from './MediaGrid';
 
 /**
- * Carousel restricted to media that lives in /media/images/throwbacks/.
+ * Grid restricted to media that lives in /media/images/throwbacks/.
  */
 
 const throwbackItems = mediaItems.filter(
@@ -21,10 +21,11 @@ export function ThrowbacksPanel() {
   const close = useSceneStore((state) => state.closeThrowbacks);
 
   return (
-    <MediaCarousel
+    <MediaGrid
       items={throwbackItems}
       isOpen={isOpen}
       close={close}
+      title="Throwbacks"
       ariaLabel="Throwback photos"
     />
   );

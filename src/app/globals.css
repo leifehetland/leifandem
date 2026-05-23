@@ -38,6 +38,14 @@
 @layer base {
   :root {
     color-scheme: light;
+    /*
+     * Height of the bottom-pinned <PlaylistBar> (compact Spotify embed),
+     * including iOS safe-area inset. Full-height panels reference this so
+     * their content stops above the bar instead of being hidden by it.
+     *
+     * 5.5rem = pt-2 (0.5rem) + 80px iframe = 88px visible chrome.
+     */
+    --playlist-bar-offset: calc(5.5rem + env(safe-area-inset-bottom));
   }
 
   html,
@@ -109,6 +117,21 @@
     text-shadow:
       0 1px 10px color-mix(in oklab, var(--color-cyan-glow) 25%, transparent),
       0 2px 24px color-mix(in oklab, var(--color-cyan-glow) 12%, transparent);
+  }
+
+  /*
+   * Drop-shadow that lifts copy off mixed-luminosity photos.
+   *
+   * A soft warm-cream halo separates the glyphs from any photo behind them,
+   * then a faint dark drop adds enough contrast for legibility on lighter
+   * regions. Use on small labels that need to stay readable over the
+   * polaroid collage and the 3D scene.
+   */
+  .text-shadow-warm {
+    text-shadow:
+      0 1px 2px rgba(20, 12, 6, 0.35),
+      0 2px 6px rgba(20, 12, 6, 0.2),
+      0 0 18px color-mix(in oklab, var(--color-void) 70%, transparent);
   }
 
   /*

@@ -76,7 +76,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="font-accent text-sm uppercase tracking-[0.4em] text-ink/50"
+              className="text-shadow-warm font-accent text-lg uppercase tracking-[0.4em] text-ink sm:text-xl"
             >
               Surprise! We tied the knot...
             </motion.p>
@@ -96,7 +96,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 1.4, repeat: Infinity, repeatType: 'reverse' }}
-              className="font-accent mt-16 text-base uppercase tracking-[0.35em] text-ink/40"
+              className="text-shadow-warm font-accent mt-16 text-xl uppercase tracking-[0.35em] text-ink sm:text-2xl"
             >
               Tap to enter
             </motion.p>

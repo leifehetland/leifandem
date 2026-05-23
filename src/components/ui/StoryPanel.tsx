@@ -45,7 +45,7 @@ export function StoryPanel({ children }: { children: ReactNode }) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="pointer-events-auto fixed inset-y-0 right-0 z-50 flex w-full max-w-[480px] flex-col border-l border-ink/10 bg-void/97 shadow-[0_0_60px_-10px_rgba(196,114,78,0.2)]"
+            className="pointer-events-auto fixed top-0 right-0 bottom-[var(--playlist-bar-offset)] z-50 flex w-full max-w-[480px] flex-col border-l border-ink/10 bg-void/97 shadow-[0_0_60px_-10px_rgba(196,114,78,0.2)]"
           >
             <div className="flex items-center justify-between border-b border-ink/10 px-6 py-4">
               <h2

@@ -15,15 +15,12 @@ interface SceneStore {
   // Panel state
   isStoryOpen: boolean;
   isGiftsOpen: boolean;
-  isGalleryOpen: boolean;
   isCeremonyOpen: boolean;
   isThrowbacksOpen: boolean;
   openStory: () => void;
   closeStory: () => void;
   openGifts: () => void;
   closeGifts: () => void;
-  openGallery: () => void;
-  closeGallery: () => void;
   openCeremony: () => void;
   closeCeremony: () => void;
   openThrowbacks: () => void;
@@ -63,15 +60,12 @@ export const useSceneStore = create<SceneStore>()(
 
       isStoryOpen: false,
       isGiftsOpen: false,
-      isGalleryOpen: false,
       isCeremonyOpen: false,
       isThrowbacksOpen: false,
       openStory: () => set({ isStoryOpen: true }),
       closeStory: () => set({ isStoryOpen: false }),
       openGifts: () => set({ isGiftsOpen: true }),
       closeGifts: () => set({ isGiftsOpen: false }),
-      openGallery: () => set({ isGalleryOpen: true }),
-      closeGallery: () => set({ isGalleryOpen: false }),
       openCeremony: () => set({ isCeremonyOpen: true }),
       closeCeremony: () => set({ isCeremonyOpen: false }),
       openThrowbacks: () => set({ isThrowbacksOpen: true }),

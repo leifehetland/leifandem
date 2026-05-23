@@ -18,14 +18,16 @@ export function Hero() {
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: hasEntered ? 1 : 0, y: hasEntered ? 0 : -8 }}
         transition={{ duration: 0.9, ease: 'easeOut', delay: hasEntered ? 0.4 : 0 }}
-        className="pointer-events-auto text-center"
+        className="pointer-events-auto rounded-2xl border border-ink/10 bg-void/75 px-6 py-3 text-center shadow-sm backdrop-blur-md sm:px-10 sm:py-4"
       >
-        <h1 className="text-glow-cyan text-balance text-2xl font-light tracking-widest sm:text-3xl">
+        <h1 className="text-glow-cyan text-shadow-warm text-balance text-3xl font-light tracking-widest sm:text-5xl">
           {COUPLE.partnerOne}
-          <span className="mx-3 text-cyan-glow/50">&amp;</span>
+          <span className="mx-3 text-cyan-glow/60">&amp;</span>
           {COUPLE.partnerTwo}
         </h1>
-        <p className="mt-1 text-xs uppercase tracking-[0.4em] text-ink/50">{COUPLE.dateDisplay}</p>
+        <p className="text-shadow-warm mt-2 text-sm uppercase tracking-[0.4em] text-ink/75 sm:text-base">
+          {COUPLE.dateDisplay}
+        </p>
       </motion.div>
     </header>
   );

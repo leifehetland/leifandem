@@ -4,10 +4,10 @@ import { mediaItems } from '@/lib/media-manifest';
 import { useSceneStore } from '@/stores/sceneStore';
 import type { PhotoItem, VideoItem } from '@/types';
 
-import { MediaCarousel } from './MediaCarousel';
+import { MediaGrid } from './MediaGrid';
 
 /**
- * Carousel restricted to media that lives in /media/images/atlceremony/.
+ * Grid restricted to media that lives in /media/images/atlceremony/.
  */
 
 const ceremonyItems = mediaItems.filter(
@@ -21,10 +21,11 @@ export function CeremonyPanel() {
   const close = useSceneStore((state) => state.closeCeremony);
 
   return (
-    <MediaCarousel
+    <MediaGrid
       items={ceremonyItems}
       isOpen={isOpen}
       close={close}
+      title="Ceremony"
       ariaLabel="Ceremony photos"
     />
   );

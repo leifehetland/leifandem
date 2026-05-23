@@ -23,7 +23,7 @@ export function GiftModal() {
           role="dialog"
           aria-modal="true"
           aria-labelledby="gift-modal-title"
-          className="pointer-events-auto fixed inset-0 z-40 flex items-center justify-center px-4"
+          className="pointer-events-auto fixed inset-x-0 top-0 bottom-[var(--playlist-bar-offset)] z-40 flex items-center justify-center px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -32,7 +32,7 @@ export function GiftModal() {
           {/* Backdrop */}
           <button
             type="button"
-            aria-label="Close gift options"
+            aria-label="Close support options"
             onClick={close}
             className="absolute inset-0 bg-ink/25 backdrop-blur-md"
           />
@@ -65,20 +65,12 @@ export function GiftModal() {
               {GIFT_COPY.body}
             </p>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              <a
-                href={GIFT_LINKS.amazon}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border border-cyan-glow/35 bg-cyan-glow/8 px-4 py-4 text-center text-sm font-medium tracking-wide text-cyan-glow transition hover:bg-cyan-glow/18"
-              >
-                Amazon wishlist
-              </a>
+            <div className="mt-8 flex justify-center">
               <a
                 href={GIFT_LINKS.honeyfund}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl border border-magenta-glow/35 bg-magenta-glow/8 px-4 py-4 text-center text-sm font-medium tracking-wide text-magenta-glow transition hover:bg-magenta-glow/18"
+                className="w-full max-w-xs rounded-xl border border-magenta-glow/35 bg-magenta-glow/8 px-4 py-4 text-center text-sm font-medium tracking-wide text-magenta-glow transition hover:bg-magenta-glow/18"
               >
                 Honeyfund
               </a>

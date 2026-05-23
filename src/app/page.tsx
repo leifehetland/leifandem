@@ -2,7 +2,6 @@ import { SceneBackground } from '@/components/scene/SceneBackground';
 import { AudioToggle } from '@/components/ui/AudioToggle';
 import { CeremonyPanel } from '@/components/ui/CeremonyPanel';
 import { FocusedCardModal } from '@/components/ui/FocusedCardModal';
-import { GalleryPanel } from '@/components/ui/GalleryPanel';
 import { GiftModal } from '@/components/ui/GiftModal';
 import { Hero } from '@/components/ui/Hero';
 import { LoadingScreen } from '@/components/ui/LoadingScreen';
@@ -27,9 +26,10 @@ import { WebGLFallback } from '@/components/ui/WebGLFallback';
  *                       so it shows through when the canvas isn't rendered.
  *   z= 10  <WebGLFallback> (relative, inside main, only when tier='low')
  *   z= 30  <Hero>, <NavButtons>, <AudioToggle>
- *   z= 40  <FocusedCardModal>, <GiftModal>
- *   z= 50  <StoryPanel>, <GalleryPanel>, <CeremonyPanel>, <ThrowbacksPanel>,
- *          <LoadingScreen>
+ *   z= 40  <GiftModal>
+ *   z= 50  <StoryPanel>, <CeremonyPanel>, <ThrowbacksPanel>, <LoadingScreen>
+ *   z= 55  <FocusedCardModal> — sits above the grid panels so taps on a
+ *          thumbnail open the full-size photo on top of the grid
  *   z= 60  <PlaylistBar> — sits above the panels so the playlist stays
  *          accessible while any of them are open. It's gated on
  *          `hasEntered`, so the LoadingScreen still appears alone.
@@ -52,7 +52,6 @@ export default function Page() {
         <StoryPanel>
           <StoryContent />
         </StoryPanel>
-        <GalleryPanel />
         <CeremonyPanel />
         <ThrowbacksPanel />
         <PlaylistBar />

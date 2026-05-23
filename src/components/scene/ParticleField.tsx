@@ -29,36 +29,42 @@ const EXIT_R = 10.5;
 const EXIT_R_SQ = EXIT_R * EXIT_R; // precomputed — avoids sqrt per particle per frame
 
 /**
- * Eleven warm pastel tones — a full wedding garden palette.
+ * Saturated bouquet palette — sixteen wedding-celebration tones.
  * Each tuple is [THREE.Color, per-color weight (must sum to 1.0)].
  *
- * The lightest, most neutral tones carry the most weight so the overall field
- * reads as warm luminous mist. The richer hues (terra, mauve, sage, blue) are
- * accents that catch the eye without dominating.
+ * Tuned for "louder": deeper saturation across the warm spectrum, with jewel
+ * cools and bright greens as accents so the field reads as a confetti of
+ * colour rather than a single warm mist. The hot-tones still dominate so the
+ * field stays anchored in the wedding's terracotta-and-cream identity.
  *
- *   Warm neutrals  → cream, golden cream, soft peach      ~35 %
- *   Peach family   → terracotta, blush, dusty rose        ~25 %
- *   Cool accents   → lavender, dusty blue, soft sky       ~20 %
- *   Earth / nature → reddish brown, sage                  ~12 %
- *   Warm amber     → amber                                ~ 8 %
+ *   Hot warm tones → coral, peach, magenta, rose, pink     ~42 %
+ *   Gold / orange  → marigold, amber, sunset               ~18 %
+ *   Jewel cools    → violet, periwinkle, teal, aqua        ~20 %
+ *   Greens         → sage, mint                            ~ 9 %
+ *   Highlights     → cream, garnet                         ~11 %
  */
 const COLOR_TABLE: ReadonlyArray<readonly [THREE.Color, number]> = [
-  // ── Peach family (~65 %) ─────────────────────────────────────────────────
-  [new THREE.Color('#F5C4A8'), 0.18] as const, // soft peach (hero tone)
-  [new THREE.Color('#F0A882'), 0.13] as const, // mid peach
-  [new THREE.Color('#E8B8B0'), 0.13] as const, // blush peach
-  [new THREE.Color('#C4724E'), 0.12] as const, // terracotta / deep peach
-  [new THREE.Color('#C48A80'), 0.09] as const, // dusty rose-peach
-  // ── Warm neutrals (~20 %) ────────────────────────────────────────────────
-  [new THREE.Color('#F2DBC8'), 0.11] as const, // warm cream
-  [new THREE.Color('#EDD5B8'), 0.09] as const, // golden cream
-  // ── Cool accents (~12 %) — counterpoint that makes the peach pop ─────────
-  [new THREE.Color('#C4B0D4'), 0.06] as const, // soft lavender
-  [new THREE.Color('#8FADBF'), 0.04] as const, // dusty blue
-  [new THREE.Color('#A8C4D0'), 0.02] as const, // soft sky
-  // ── Earth accents (~3 %) ─────────────────────────────────────────────────
-  [new THREE.Color('#8A3E2A'), 0.02] as const, // reddish brown
-  [new THREE.Color('#D4A85A'), 0.01] as const, // warm amber
+  // ── Hot warm tones (~42 %) ───────────────────────────────────────────────
+  [new THREE.Color('#FF6B47'), 0.10] as const, // coral red
+  [new THREE.Color('#FF8A65'), 0.09] as const, // hot peach
+  [new THREE.Color('#F09060'), 0.08] as const, // saturated peach
+  [new THREE.Color('#E6447D'), 0.08] as const, // magenta rose
+  [new THREE.Color('#FF7BA3'), 0.07] as const, // pink rose
+  // ── Gold / orange (~18 %) ────────────────────────────────────────────────
+  [new THREE.Color('#F5A623'), 0.07] as const, // marigold
+  [new THREE.Color('#E8B43A'), 0.06] as const, // amber gold
+  [new THREE.Color('#FF9248'), 0.05] as const, // sunset orange
+  // ── Jewel cools (~20 %) — counterpoint that makes the warms pop ──────────
+  [new THREE.Color('#8B5CC4'), 0.06] as const, // royal violet
+  [new THREE.Color('#7B8DDB'), 0.05] as const, // periwinkle
+  [new THREE.Color('#3FB8AF'), 0.05] as const, // teal
+  [new THREE.Color('#5BC9D6'), 0.04] as const, // aqua
+  // ── Greens (~9 %) ────────────────────────────────────────────────────────
+  [new THREE.Color('#9ACB78'), 0.05] as const, // sage green
+  [new THREE.Color('#7FD9B0'), 0.04] as const, // mint
+  // ── Highlights (~11 %) ───────────────────────────────────────────────────
+  [new THREE.Color('#F9E5C7'), 0.06] as const, // warm cream sparkle
+  [new THREE.Color('#A6342D'), 0.05] as const, // garnet deep
 ];
 
 /** Cumulative thresholds for weighted random color selection. */
@@ -202,18 +208,20 @@ export function ParticleField() {
       </bufferGeometry>
       {/*
        * NormalBlending on a light background: additive blending washes to
-       * white on ivory. Normal blending lets the six warm tones show through
-       * as soft semi-transparent motes drifting across the ivory canvas.
+       * white on ivory. Normal blending lets the saturated palette show
+       * through as colourful motes drifting across the ivory canvas. The
+       * opacity is tuned just high enough that the jewel tones read
+       * distinctly without flattening the warm dominant hues.
        */}
       <pointsMaterial
-        size={0.14}
+        size={0.15}
         sizeAttenuation
         vertexColors
         transparent
         depthWrite={false}
         blending={THREE.NormalBlending}
         map={sprite}
-        opacity={0.55}
+        opacity={0.7}
       />
     </points>
   );

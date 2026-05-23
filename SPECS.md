@@ -238,7 +238,7 @@ The low-tier fallback is a CSS grid of static photo cards with the same modal in
 
 **`GiftModal.tsx`**
 - Centered modal, max-width 520 px, blurred backdrop
-- Two CTAs as buttons styled identically: Amazon Wishlist, Honeyfund
+- One CTA as a button: Honeyfund
 - Short prose between them (editable in `constants.ts`)
 - Close on background tap, ESC, or close button
 
@@ -405,7 +405,6 @@ No Jest, no Playwright, unless a regression repeatedly bites.
 
 These need answers before launch but build can proceed with placeholders:
 
-- Final Amazon wishlist URL
 - Final Honeyfund URL
 - Final story prose
 - Final media selections (12–20 photos, 2–4 videos, 0–3 audio clips)

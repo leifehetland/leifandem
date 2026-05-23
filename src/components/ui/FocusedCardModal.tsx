@@ -34,7 +34,7 @@ export function FocusedCardModal() {
           role="dialog"
           aria-modal="true"
           aria-labelledby="focused-card-caption"
-          className="pointer-events-auto fixed inset-0 z-40 flex items-center justify-center px-4 py-10"
+          className="pointer-events-auto fixed inset-x-0 top-0 bottom-[var(--playlist-bar-offset)] z-[55] flex items-center justify-center px-4 py-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

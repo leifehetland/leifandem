@@ -11,9 +11,9 @@ export const COUPLE = {
   partnerOne: 'Emily Rose Davis',
   partnerTwo: 'Leif Emmanuel Hetland',
   /** Human-readable date displayed in the hero. */
-  dateDisplay: 'May 16, 2026',
+  dateDisplay: 'May 20, 2026',
   /** ISO 8601 date string for metadata / structured data. */
-  dateISO: '2026-05-16 14:30:00.000',
+  dateISO: '2026-05-20 14:30:00.000',
 } as const;
 
 export const SITE = {
@@ -23,13 +23,13 @@ export const SITE = {
 } as const;
 
 export const GIFT_LINKS = {
-  amazon: 'https://www.amazon.com/wedding/registry',
-  honeyfund: 'https://www.honeyfund.com',
+  honeyfund: 'https://www.honeyfund.com/site/davis-hetland-05-20-2026',
 } as const;
 
 export const GIFT_COPY = {
-  heading: "If you'd like to celebrate with us…",
-  body: 'Your presence is the gift. If you’d still like to give something, either of these works perfectly.',
+  heading: 'Your presence in our lives has been the greatest gift. For those who wish to invest in future adventures, a honeymoon fund awaits. ',
+  body: `The couple will be planning a bucket-list trip to Japan for our honeymoon! There are no expectations for monetary support. However, if you are in a position to give, we would appreciate contributions toward our honeymoon and our home. 
+We've partnered with Honeyfund to make it easy. Honeyfund supports both domestic and international transactions, so this should work for friends and family in the US and Norway alike.`,
 } as const;
 
 /**
@@ -40,7 +40,7 @@ export const GIFT_COPY = {
 export const PLAYLIST = {
   embedUrl:
     'https://open.spotify.com/embed/playlist/2nACHum35lEAC2uyu5wn3K?utm_source=generator&theme=0',
-  title: 'Our wedding playlist',
+  title: 'Curated with love ❤️',
 } as const;
 
 /**

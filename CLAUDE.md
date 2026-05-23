@@ -6,7 +6,7 @@ Agent operating guide for the Wedding Splash project. Read this first before mak
 
 ## What this is
 
-A single-page wedding announcement site with an interactive 3D photo/video/audio gallery inspired by *Child of Eden*. Visitors land, explore floating media cards in a glowing particle field, read the couple's story, and click through to two gift links (Amazon wishlist and Honeyfund). The site must work on phones, look intentional, and feel magical rather than templated.
+A single-page wedding announcement site with an interactive 3D photo/video/audio gallery inspired by *Child of Eden*. Visitors land, explore floating media cards in a glowing particle field, read the couple's story, browse the Ceremony and Throwbacks photo grids, and click through to the Honeyfund gift link. The site must work on phones, look intentional, and feel magical rather than templated.
 
 Pair this file with `REQUIREMENTS.md` (product) and `SPECS.md` (technical detail).
 
