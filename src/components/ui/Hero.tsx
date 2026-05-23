@@ -22,7 +22,7 @@ export function Hero() {
       >
         <h1 className="text-glow-cyan text-shadow-warm text-balance text-3xl font-light tracking-widest sm:text-5xl">
           {COUPLE.partnerOne}
-          <span className="mx-3 text-cyan-glow/60">&amp;</span>
+          <span className="mx-3 text-cyan-glow/60">+</span>
           {COUPLE.partnerTwo}
         </h1>
         <p className="text-shadow-warm mt-2 text-sm uppercase tracking-[0.4em] text-ink/75 sm:text-base">

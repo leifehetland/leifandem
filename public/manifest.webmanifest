@@ -1,7 +1,7 @@
 {
-  "name": "Emily Rose Davis & Leif Emmanuel Hetland",
-  "short_name": "Davis & Hetland",
-  "description": "Save the date — Emily Rose Davis & Leif Emmanuel Hetland.",
+  "name": "Emily Rose Davis + Leif Emmanuel Hetland",
+  "short_name": "Davis + Hetland",
+  "description": "Save the date — Emily Rose Davis + Leif Emmanuel Hetland.",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }

@@ -10,12 +10,12 @@ import { useSceneStore } from '@/stores/sceneStore';
  * Swap any src to show different photos; order determines grid position.
  */
 const POLAROIDS = [
-  '/media/images/primaryphotos/img_0388.webp',
   '/media/images/primaryphotos/img_0408.webp',
-  '/media/images/primaryphotos/img_0410.webp',
+  '/media/images/primaryphotos/img_0422.webp',
+  '/media/images/primaryphotos/img_0388.webp',
   '/media/images/primaryphotos/img_0414.webp',
   '/media/images/primaryphotos/img_0416.webp',
-  '/media/images/primaryphotos/img_0422.webp',
+  '/media/images/primaryphotos/img_0410.webp',
 ] as const;
 
 /** Subtle per-card tilt — alternating directions so the grid feels natural. */
@@ -88,7 +88,7 @@ export function LoadingScreen() {
               className="text-glow-cyan mt-6 text-balance text-5xl font-light leading-tight tracking-widest text-cyan-glow sm:text-7xl"
             >
               {COUPLE.partnerOne}
-              <span className="mx-4 text-cyan-glow/40">&amp;</span>
+              <span className="mx-4 text-cyan-glow/40">+</span>
               {COUPLE.partnerTwo}
             </motion.h1>
 

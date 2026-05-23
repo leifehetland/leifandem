@@ -18,8 +18,8 @@ export const COUPLE = {
 
 export const SITE = {
   url: 'https://example.com',
-  title: `${COUPLE.partnerOne} & ${COUPLE.partnerTwo}`,
-  description: `Save the date — ${COUPLE.partnerOne} & ${COUPLE.partnerTwo}.`,
+  title: `${COUPLE.partnerOne} + ${COUPLE.partnerTwo}`,
+  description: `${COUPLE.partnerOne} + ${COUPLE.partnerTwo}.`,
 } as const;
 
 export const GIFT_LINKS = {
