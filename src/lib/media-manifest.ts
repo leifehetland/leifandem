@@ -1907,15 +1907,6 @@ export const mediaItems: readonly MediaItem[] = [
     alt: "Photo from throwbacks: img_0072",
   },
   {
-    id: "throwbacks-img_0148",
-    type: 'photo',
-    src: "/media/images/throwbacks/img_0148.webp",
-    width: 768,
-    height: 1024,
-    caption: "A throwback.",
-    alt: "Photo from throwbacks: img_0148",
-  },
-  {
     id: "throwbacks-img_0160",
     type: 'photo',
     src: "/media/images/throwbacks/img_0160.webp",
@@ -2130,15 +2121,6 @@ export const mediaItems: readonly MediaItem[] = [
     height: 1009,
     caption: "A throwback.",
     alt: "Photo from throwbacks: img_0820",
-  },
-  {
-    id: "throwbacks-img_0821",
-    type: 'photo',
-    src: "/media/images/throwbacks/img_0821.webp",
-    width: 472,
-    height: 1024,
-    caption: "A throwback.",
-    alt: "Photo from throwbacks: img_0821",
   },
   {
     id: "throwbacks-img_0822",
